@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registrar Personal - Capital Móvil</title>
+  <link rel="stylesheet" href="css/registro_personal.css">
+</head>
+<body>
+  <header>
+    <h1>Registro de Personal</h1>
+    <nav>
+      <a href="index.html">Inicio</a> |
+      <a href="registro_dispositivos.html">Registrar Dispositivos</a> |
+      <a href="ver_datos.html">Ver Datos</a>
+    </nav>
+  </header>
+
+  <main>
+    <form id="form-personal">
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" required><br>
+
+      <label for="cargo">Cargo:</label>
+      <input type="text" id="cargo" required><br>
+
+      <button type="submit">Registrar</button>
+    </form>
+  </main>
+
+  <script>
+    document.getElementById("form-personal").addEventListener("submit", function(event) {
+      event.preventDefault();
+      const nombre = document.getElementById("nombre").value;
+      const cargo = document.getElementById("cargo").value;
+
+      const personal = JSON.parse(sessionStorage.getItem("personal") || "[]");
+      personal.push({ nombre, cargo });
+      sessionStorage.setItem("personal", JSON.stringify(personal));
+
+      alert("Personal registrado correctamente.");
+      document.getElementById("form-personal").reset();
+    });
+  </script>
+</body>
+</html>

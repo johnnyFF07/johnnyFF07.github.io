@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Datos Registrados - Capital Móvil</title>
+  <link rel="stylesheet" href="css/ver_datos.css">
+</head>
+<body>
+  <header>
+    <h1>Datos Registrados</h1>
+    <nav>
+      <a href="index.html">Inicio</a> |
+      <a href="registro_personal.html">Registrar Personal</a> |
+      <a href="registro_dispositivos.html">Registrar Dispositivos</a>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Personal</h2>
+      <table id="tabla-personal">
+        <thead>
+          <tr><th>Nombre</th><th>Cargo</th></tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>Dispositivos</h2>
+      <table id="tabla-dispositivos">
+        <thead>
+          <tr><th>Modelo</th><th>Marca</th><th>Condición</th></tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+  </main>
+
+  <script>
+    function cargarDatos() {
+      const personal = JSON.parse(sessionStorage.getItem("personal") || "[]");
+      const dispositivos = JSON.parse(sessionStorage.getItem("dispositivos") || "[]");
+
+      const tbodyPersonal = document.querySelector("#tabla-personal tbody");
+      tbodyPersonal.innerHTML = "";
+      personal.forEach(p => {
+        const row = `<tr><td>${p.nombre}</td><td>${p.cargo}</td></tr>`;
+        tbodyPersonal.innerHTML += row;
+      });
+
+      const tbodyDispositivos = document.querySelector("#tabla-dispositivos tbody");
+      tbodyDispositivos.innerHTML = "";
+      dispositivos.forEach(d => {
+        const row = `<tr><td>${d.modelo}</td><td>${d.marca}</td><td>${d.condicion}</td></tr>`;
+        tbodyDispositivos.innerHTML += row;
+      });
+    }
+
+    window.onload = cargarDatos;
+  </script>
+</body>
+</html>
