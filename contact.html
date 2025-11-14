@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Clínica Dental Sonrisa Perfecta</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header y navegación -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <i class="fas fa-tooth"></i>
+                <h1>Sonrisa Perfecta</h1>
+            </div>
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="services.html">Servicios</a></li>
+                    <li><a href="about.html">Nosotros</a></li>
+                    <li><a href="contact.html" class="active">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Banner de Página -->
+    <section class="page-banner">
+        <div class="container">
+            <h2>Contacto</h2>
+            <p>Estamos aquí para responder todas tus preguntas y ayudarte a programar tu cita.</p>
+        </div>
+    </section>
+
+    <!-- Sección de contacto -->
+    <section class="contact-detailed">
+        <div class="container">
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h2>Información de Contacto</h2>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>Dirección</h3>
+                            <p>Av. Principal #123, Ciudad</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h3>Teléfono</h3>
+                            <p>+1 (555) 123-4567</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Email</h3>
+                            <p>info@sonrisaperfecta.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h3>Horario de Atención</h3>
+                            <p>Lunes a Viernes: 8:00 am - 6:00 pm</p>
+                            <p>Sábados: 9:00 am - 2:00 pm</p>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <h3>Síguenos en redes sociales</h3>
+                        <div class="social-icons">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h2>Solicitar Cita</h2>
+                    <form id="appointmentForm">
+                        <div class="form-group">
+                            <label for="name">Nombre completo *</label>
+                            <input type="text" id="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Correo electrónico *</label>
+                            <input type="email" id="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Teléfono *</label>
+                            <input type="tel" id="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="service">Servicio de interés</label>
+                            <select id="service">
+                                <option value="">Selecciona un servicio</option>
+                                <option value="blanqueamiento">Blanqueamiento Dental</option>
+                                <option value="ortodoncia">Ortodoncia</option>
+                                <option value="implantes">Implantes Dentales</option>
+                                <option value="endodoncia">Endodoncia</option>
+                                <option value="estetica">Estética Dental</option>
+                                <option value="odontopediatria">Odontopediatría</option>
+                                <option value="consulta">Consulta General</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="date">Fecha preferida</label>
+                            <input type="date" id="date">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Mensaje adicional</label>
+                            <textarea id="message" rows="5"></textarea>
+                        </div>
+                        <button type="submit" class="btn">Enviar Solicitud</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mapa -->
+    <section class="map">
+        <div class="container">
+            <h2>Nuestra Ubicación</h2>
+            <div class="map-placeholder">
+                <i class="fas fa-map-marked-alt"></i>
+                <p>Mapa interactivo de nuestra ubicación</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-logo">
+                    <h3>Sonrisa Perfecta</h3>
+                    <p>Tu clínica dental de confianza, comprometida con tu salud bucal y tu sonrisa perfecta.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Enlaces Rápidos</h4>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="services.html">Servicios</a></li>
+                        <li><a href="about.html">Nosotros</a></li>
+                        <li><a href="contact.html">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-hours">
+                    <h4>Horario de Atención</h4>
+                    <p>Lunes a Viernes: 8:00 am - 6:00 pm</p>
+                    <p>Sábados: 9:00 am - 2:00 pm</p>
+                    <p>Domingos: Cerrado</p>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contacto</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> Av. Principal #123, Ciudad</p>
+                    <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                    <p><i class="fas fa-envelope"></i> info@sonrisaperfecta.com</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 Clínica Dental Sonrisa Perfecta. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/form-validation.js"></script>
+</body>
+</html>
